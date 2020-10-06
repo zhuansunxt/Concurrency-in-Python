@@ -14,7 +14,9 @@ import sys
 # with rate limitting / quota.
 class TokenBucket:
 
-	# tb = TokenBucket(N, R)
+	# tb = TokenBucket(M, R)
+	# max_size decides the peak number of tokens can be granted per second
+	# rate decides the avg number of tokens can be granted per second
 	def __init__(self, max_size, rate=1):
 		self.max_size = max_size
 		self.token_left = 0
